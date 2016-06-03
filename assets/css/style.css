@@ -1,0 +1,245 @@
+/* We're mobile-first!
+   Your main styles at the top apply to the smallest screen/viewport,
+   e.g. width of 320 px */
+
+html {
+    font-size: 24px;
+    font-family: "DINPro", Helvetica, sans-serif;
+}
+
+body {
+    margin: 0.5rem;
+}
+
+a, a:link, a:visited {
+    color: #33CCCC;
+    text-decoration: underline;
+}
+a:hover {
+    color: #eee;
+}
+a:active {
+    color: #999;
+}
+
+
+/* header, logo */
+
+header {
+    width: 100%;
+}
+
+header section#logo {
+    background-color: #33CCCC;
+    color: #fff;
+    display: block;
+    padding: 0.8rem 0;
+    text-align: center;
+    height: 8rem;
+}
+header section#logo img {
+    height: 100%;
+}
+
+
+/* menu */
+
+nav#menu {
+    width: 100%;
+}
+
+nav#menu ul {
+    background-color: #333;
+    margin: 0.5rem 0;
+    padding: 0;
+}
+nav#menu ul a,
+nav#menu ul a:visited {
+    background-color: #333;
+    color: #eee;
+    display: block;
+    padding: 1rem 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+nav#menu ul a:hover {
+    background-color: #666;
+    color: #fff;
+}
+nav#menu ul a:active {
+    background-color: #000;
+    color: #ccc;
+}
+
+
+/* main */
+
+main {
+    background-color: #F0F3F1;
+    padding: 1rem;
+}
+
+
+/* sections */
+
+section#book1 {
+    margin-top: 2rem;
+}
+
+
+/* articles */
+
+article.col {
+    margin: 0 0 2rem 0;
+}
+article.col.col-2-2 {
+    margin-bottom: 0;
+}
+
+article.col p {
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+}
+
+section#book1 article p {
+    font-size: 0.9rem;
+    margin: 0.2rem 0 1rem;
+}
+
+
+/* magic content */
+
+img#animal {
+    width: 100%;
+}
+
+button#magic {
+    background: transparent url("../images/magic-wand.svg") no-repeat top center;
+    background-size: 50%;
+    border: none;
+    cursor: pointer;
+    font-family: "DINPro", Helvetica, sans-serif;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding-top: 6rem;
+    width: 100%;
+}
+
+
+/* footer */
+
+footer {
+    background-color: #E7ECE8;
+    padding: 0.3rem 1rem;
+}
+
+footer p {
+    font-size: 0.77rem;
+    margin: 0.2rem 0;
+    text-align: center;
+}
+
+
+
+/* This is our first breakpoint! If you change the orientation of the mobile
+   phone to horizontal, then the next width breakpoint is 480px (in our case). */
+
+@media screen and (min-width: 480px)
+{
+    article.col {
+        margin: 0 0 0.5rem 0;
+        padding: 0;
+    }
+    
+    article.col-2-1,
+    article.col-2-2 {
+        float: none;
+        width: 100%;
+    }
+     article.col-2-1 {
+        margin-right: 0;
+        padding-bottom: 1rem;
+    }
+    
+    section:after {
+        content: " ";
+        display: table;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+    
+    img#animal {
+        width: 50%;
+    }
+    
+    button#magic {
+        float: right;
+        padding-top: 5rem;
+        width: 50%;
+    }
+}
+
+
+
+/* We're skipping a lot of possible breakpoints here ... */
+
+
+
+@media screen and (min-width: 1280px)
+{
+    html {
+        font-size: 36px;
+    }
+    
+    
+    /* menu nav */
+    
+    nav#menu ul {
+        margin: 0;
+        text-align: center;
+    }
+    nav#menu ul:after {
+        content: " ";
+        clear: both;
+    }
+    
+    nav#menu ul li {
+        float: left;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 33.333%
+    }
+    
+    nav#menu ul li a {
+        width: 100%;
+    }
+    
+    
+    /* cols */
+    
+    article.col {
+        float: left;
+        margin: 0;
+        padding: 2rem 0 0;
+        width: 48.5%;
+        min-height: 400px;
+    }
+    article.col-2-1 {
+        margin-right: 2.5%;
+    }
+    
+    article.col p {
+        margin: 0;
+    }
+    
+    
+    /* footer */
+    
+    div.footer {
+        padding: 0.8rem 1rem;
+    }
+    
+}
